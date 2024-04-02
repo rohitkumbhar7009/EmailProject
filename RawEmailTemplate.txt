@@ -1,0 +1,38 @@
+ 
+ 
+ 
+                         { Create Template }                                                                           {Copy From Library}
+							       |
+					  > Template Name  
+					  > Mode
+					      .Use Contacts Shortcodes  (Account Shortcodes ,contact shortcodes,Date shortcodes)
+					      .Use account shortcodes   (Account Shortcodes ,Date shortcodes)
+					  >From (Select react)
+					  >Email Subject 
+					  *Add Sortcodes 
+					  
+				      > .WYSIWYG
+					    .HTML
+					  >Text Editor 
+					 
+					 
+			          [Save&Exit] [save] [Cancel]
+							
+							
+							
+							
+							
+							
+							
+							
+							The 2 Types of Shortcodes
+							
+There  are primarily two types of shortcodes in WordPress.
+
+An informational image showing the 2 Types of Shortcodes: Self-closing and Enclosing. Both can be with and without attributes.
+Self-closing and Enclosing shortcodes can be valid with or without attributes.
+Self-closing Shortcodes: These don’t need a closing tag.
+Example: The gallery shortcode doesn’t need a closing tag. We add everything it needs with different attributes.
+
+Enclosing Shortcodes: These need a closing tag. Enclosing shortcodes generally manipulate the content between the opening and closing tags.
+Example: The caption shortcode is used to wrap a caption around any content. It’s mainly used to add a caption to images, but it works with any HTML element.
