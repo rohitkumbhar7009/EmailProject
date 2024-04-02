@@ -8,10 +8,10 @@ import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
 import { BsQuestionCircle } from 'react-icons/bs';
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import { toast } from 'react-toastify';
-
+import {Link ,useNavigate,useParams } from "react-router-dom";
 import 'react-toastify/dist/ReactToastify.css';
 import makeAnimated from 'react-select/animated';
-const TextEditor = () => {
+const Shortcodes = () => {
 
 
     function showToast(message, type) {
@@ -257,13 +257,13 @@ const TextEditor = () => {
         });
     
         const requestOptions = {
-            method: "POST",
+            method: "PATCH",
             headers: myHeaders,
             body: raw,
             redirect: "follow"
         };
     
-        fetch("http://127.0.0.1:8080/workflow/emailtemplate", requestOptions)
+        fetch("http://127.0.0.1:8080/workflow/emailtemplate/" +_id, requestOptions)
             .then((response) => {
                 if (!response.ok) {
                     throw new Error("Network response was not ok");
@@ -325,6 +325,33 @@ const TextEditor = () => {
 
 
 
+    const[dataemtemp,setData]=useState("")
+    //get Data _id Wise 
+    const navigate = useNavigate();
+    const {_id}=useParams();
+
+    useEffect(() => {
+        const getcategory = async () => {
+          const res = await fetch("http://127.0.0.1:8080/workflow/emailtemplate/" + _id);
+          const getdata = await res.json();
+      
+          setData(getdata.emailTemplate)
+          emailtempdata(getdata.emailTemplate);
+
+      
+        };
+      
+        getcategory();
+      
+      }, []);
+
+      const emailtempdata=(dataemtemp)=>{
+        setTemplateName(dataemtemp.templatename)
+        // setInputText(dataemtemp.from)
+        setInputText (dataemtemp.emailsubject)
+        setTextData(dataemtemp.emailbody)
+        }
+
 
 
     return (
@@ -350,7 +377,7 @@ const TextEditor = () => {
                                                 className="simple-input"
                                                 placeholder="Template Name"
                                                 type="text"
-
+                                                value={templateName}
                                                 onChange={handleInputChange1}
 
                                             />
@@ -597,4 +624,4 @@ const TextEditor = () => {
     );
 };
 
-export default TextEditor;
+export default Shortcodes;

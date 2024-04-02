@@ -1,6 +1,8 @@
 import React from 'react';
 import { Routes, Route } from "react-router-dom";
 import TextEditor from './TextEditor';
+import EmailTemplate from './EmailTemplate';
+import Shortcodes from './Shortcodes';
 
 
 
@@ -16,8 +18,8 @@ const App = () => {
        <Routes>
     
               <Route path="/"     element={<TextEditor/>}  />
-              {/* <Route path="/adminsignup" element={<SignUp/>} />
-              <Route path="/forgotPass" element={<ForgotPass/>} /> */}
+               <Route path="/listemail" element={<EmailTemplate/>} /> 
+              <Route path="/upemailtemplate/:_id" element={<Shortcodes/>} /> 
         
         
             </Routes>

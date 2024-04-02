@@ -8,7 +8,7 @@
   }
   
   .panel__header {
-    text-align: center;
+    text-align:left;
     margin-bottom: 20px;
   }
   
@@ -24,7 +24,7 @@
   
   /* Styles for form */
   .form {
-    width: 100%;
+    width: 80%;
   }
   
   .form__section {
@@ -40,7 +40,7 @@
   }
   
   .simple-input {
-    width: 50%;
+    width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -60,11 +60,7 @@
  
   }
   
- 
-  
 
-  
-  /* Styles for radio buttons */
   .radio__header {
     display: flex;
     align-items: center;
@@ -74,9 +70,9 @@
     margin-right: 10px;
   }
   
-  /* Styles for WYSIWYG editor */
+
   .wysiwyg {
-    width: 100%;
+    width: 50%;
     height: 200px;
     padding: 10px;
     border: 1px solid #ccc;
@@ -84,7 +80,7 @@
     resize: vertical;
   }
   
-  /* Styles for help block */
+ 
   .help-block__link {
     margin-left: 5px;
     display: inline-block;
@@ -96,7 +92,9 @@
     height: 18px;
     vertical-align: middle;
   }
-
+  .select-container {
+    width: 90%; 
+}
 
   
   .btn-success {
@@ -115,19 +113,20 @@
   
 
   .editor-wrapper {
-    border-radius: 5px; /* Adjust border radius as needed */
+    border-radius: 5px; 
   }
   
-  /* Class for the Editor content */
+
   .editor-content {
-    border-radius: 5px; /* Adjust border radius as needed */
+    border-radius: 5px; 
     border: 1px solid #007bff; /* Border color */
     min-height: 200px; /* Adjust minimum height as needed */
     padding: 10px; /* Adjust padding as needed */
   }
   
   .editor-toolbar {
-    border: none !important;
+    border-radius: 5px; /* Adjust border radius as needed */
+    border: 1px solid #007bff; /* Border color */
   }
   
   
@@ -150,7 +149,7 @@
 
   @media (max-width: 340px) {
     .panel {
-      width: 90%;
+      width: 100%;
     }
     
     .panel__title {
@@ -160,4 +159,123 @@
     .panel__subtitle {
       font-size: 16px;
     }
+    .simple-input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+    
   }
+
+
+
+
+
+
+
+
+
+
+  .form__row {
+    position: relative;
+    margin-bottom: 20px; /* Adjust as needed */
+  }
+
+  
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 5px); /* Adjust as needed */
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc; /* Adjust as needed */
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adjust as needed */
+    z-index: 1000; /* Adjust as needed */
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Adjust as needed */
+  }
+  
+  .search-bar input {
+    width: calc(100% - 70px); /* Adjust as needed */
+    padding: 8px;
+    border: 1px solid #ccc; /* Adjust as needed */
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  .close-icon {
+    background: none;
+    border: none;
+    color: #007bff; /* Adjust as needed */
+    cursor: pointer;
+  }
+  
+  .close-icon:hover {
+    text-decoration: underline;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  ul > div {
+    padding: 10px;
+    border-bottom: 1px solid #ccc; /* Adjust as needed */
+  }
+  
+  ul > div:last-child {
+    border-bottom: none;
+  }
+  
+  ul > div span {
+    cursor: pointer;
+  }
+  
+  ul > div span:hover {
+    text-decoration: underline;
+  }
+  
+
+
+
+  .dropdown {
+    position: absolute;
+    top: calc(100% + 5px);
+    left: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    max-height: 350px; /* Adjust the max height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+.dropdown-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.dropdown-list > div {
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+
+.dropdown-list > div:last-child {
+    border-bottom: none;
+}
+
+.dropdown-list > div span {
+    cursor: pointer;
+}
+
+.dropdown-list > div span:hover {
+    text-decoration: underline;
+}
